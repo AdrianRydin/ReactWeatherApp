@@ -1,0 +1,16 @@
+.weekDayList {
+    list-style: none; 
+    padding: 1rem;
+    
+}
+
+.weekDayList {
+    font-weight: bold;
+    
+}
+
+.dayOfTheWeek{
+    padding:1rem;
+}
+
+
