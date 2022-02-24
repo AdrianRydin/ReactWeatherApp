@@ -1,55 +1,60 @@
-import react from 'react';
-import env from "react-dotenv"
-// import React, { useState, useEffect } from 'react';
+import React, {useState} from "react";
 
-// function API() {
-//     const [error, setError] = useState(null);
-//     const [isLoaded, setIsLoaded] = useState(false);
-//     const [items, setItems] = useState([]);
-  
-//     // Note: the empty deps array [] means
-//     // this useEffect will run once
-//     // similar to componentDidMount()
-//     useEffect(() => {
-//       fetch("http://api.weatherstack.com/")
-//         .then(res => res.json())
-//         .then(
-//           (result) => {
-//             setIsLoaded(true);
-//             setItems(result);
-//           },
-//           // Note: it's important to handle errors here
-//           // instead of a catch() block so that we don't swallow
-//           // exceptions from actual bugs in components.
-//           (error) => {
-//             setIsLoaded(true);
-//             setError(error);
-//           }
-//         )
-//     }, [])
-  
-//     // if (error) {
-//     //   return <div>Error: {error.message}</div>;
-//     // } else if (!isLoaded) {
-//     //   return <div>Loading...</div>;
-//     // } else {
-//     //   return (
-//     //     <ul>
-//     //       {items.map(item => (
-//     //         <li key={item.id}>
-//     //           {item.name} {item.price}
-//     //         </li>
-//     //       ))}
-//     //     </ul>
-//     //   );
-//     // }
-//   }
+interface State {
+    main: string
+    name: string
+    weather: string
 
-// export default API;
-
-
-
-function Weather(){
-    
 }
-export default Weather;
+
+
+function Api() {
+    //Väder API
+
+    const APIKey = "661acb0f32a6cfbc4b06bb0c529a83aa";
+    const [weatherData, setWeatherData] = useState([{}])
+    const [city, setCity] = useState("")
+
+    const getWeather = (event: { key: string; }) => {
+        if (event.key === "Enter") {
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${APIKey}`)
+                .then(
+                    response => response.json()
+                ).then(
+                data => {
+                    let api = data.main;
+                    setWeatherData(data)
+                    setCity("")
+                    return api;
+                }
+            )
+        }
+    }
+    return (
+        <div className="App">
+            <p>Välkommen till Weather app! Skriv en stad för att se vädret!</p>
+            <input
+                className="input"
+                placeholder="Skriv en stad..."
+                onChange={e => setCity(e.target.value)}
+                value={city}
+                onKeyPress={getWeather}
+            />
+            {typeof weatherData.main ==='undefined' ?(
+                <div>
+
+                </div>
+            ): (
+                <div>
+                    <h2>Stad: {weatherData.name}</h2>
+                    {console.log(weatherData)}
+                    <p>Temperatur: {Math.round(weatherData.main.temp)} grader</p>
+                    <p>Väder: {weatherData.weather[0].main}</p>
+                </div>
+            )}
+
+        </div>
+    );
+}
+
+export default Api;
