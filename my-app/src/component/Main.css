@@ -1,18 +1,18 @@
 .main-container {
-display: flex;
+    display: flex;
     justify-content: center;
 
 }
 
 .weekDayList {
-    list-style: none; 
+    list-style: none;
     padding: 1rem;
     display: flex;
     font-weight: bold;
 }
 
-.dayOfTheWeek{
-    padding:1rem;
+.dayOfTheWeek {
+    padding: 1rem;
     font-size: 2rem;
 }
 
@@ -22,34 +22,45 @@ main, li {
 
 
 .main-icon {
-    padding: 0;
+
     height: 2rem;
     width: 2rem;
+    padding: 0 0 1.7rem 0;
+
 }
 
-.hamburger{
-    height:100%;
-    width:25%;
-    right:0;
+.hamburger {
+    height: 100%;
+    width: 25%;
+    right: 0;
     position: absolute;
-    background: rgb(25,25,25);
-    top:0;
+    background: rgb(25, 25, 25);
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    display:none;
-    }
-    
-    .hamburger-content{
-        color: white;
-        list-style: none;
-        justify-content: space-around;
-        align-items: center;
-        height:100%;
-        width:100%;
-        line-height: 13rem;
-        margin-top: 5rem;
-        font-size: 2rem;
-    }
+    display: none;
+}
 
+.hamburger-content {
+    color: white;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    line-height: 13rem;
+    margin-top: 5rem;
+    font-size: 2rem;
+}
+
+.LinkShowMore {
+    color: black;
+    padding: 1rem 0 0 2rem;
+    text-decoration: none;
+}
+
+.LinkShowMore:hover {
+    color: red;
+}
 
