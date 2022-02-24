@@ -8,7 +8,7 @@ export default function Header(){
         <h1>
             Weather App
         </h1>
-        <span className="material-icons">
+        <span className="material-icons" id="hamburgerIcon">
         menu
         </span>
     </header>
