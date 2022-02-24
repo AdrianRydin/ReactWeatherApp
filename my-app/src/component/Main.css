@@ -13,4 +13,29 @@
     padding:1rem;
 }
 
+.hamburger{
+    height:100%;
+    width:25%;
+    right:0;
+    position: absolute;
+    background: rgb(25,25,25);
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display:none;
+    }
+    
+    .hamburger-content{
+        color: white;
+        list-style: none;
+        justify-content: space-around;
+        align-items: center;
+        height:100%;
+        width:100%;
+        line-height: 13rem;
+        margin-top: 5rem;
+        font-size: 2rem;
+    }
+
 

@@ -6,6 +6,15 @@ export default function Main() {
         <div>
         <main>
             <h2>Göteborg</h2>
+
+            <div className="hamburger">
+                <ul className="hamburger-content">
+                    <li>Göteborg</li>
+                    <li>Stockholm</li>
+                    <li>Malmö</li>
+                    <li>Umeå</li>
+                </ul>
+            </div>
             <ul className="weekDayList">
                 <li className="dayOfTheWeek">Måndag</li>
                 <li className="infoWeekDay">Temperatur Vindhastighet Nederbörd Visa mer</li>
@@ -23,4 +32,3 @@ export default function Main() {
     )
 
 }
-

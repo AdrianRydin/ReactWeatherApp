@@ -8,29 +8,41 @@ import Main from './component/Main';
 // import API from './component/Api';
 // import Weather from './component/Api';
 
-console.log(process.env)
-
+interface WeatherData {
+  
+  base: string
+  clouds: {all: number}
+  cod: number
+  coord: {lon: number, lat: number}
+  dt: number
+  id: number
+  main: {temp: number, feels_like: number, temp_min: number, temp_max: number, pressure: number, humidity: number}
+  name: string
+  sys: {type: number, id: number, country: string, sunrise: number, sunset: number}
+  timezone: number
+  visibility: number
+  weather: [{id: number, main: string, description: string, icon: string}]
+  wind: {speed: number, deg: number}
+  
+}
 
 function App() {
   //Väder API 
   const APIKey = "661acb0f32a6cfbc4b06bb0c529a83aa";
-    const [weatherData, setWeatherData] = useState([{}])
-    const [city, setCity] = useState("")
+  const language = "sv";
+  const [weatherData, setWeatherData] = useState<WeatherData[]>([])
+  const [city, setCity] = useState("")
 
     const getWeather = (event: { key: string; }) => {
         if (event.key === "Enter") {
-            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${APIKey}`)
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${APIKey}&lang=se`)
             .then(
                 response => response.json()
             ).then(
                 data => {
-                    let api = data.main;
                     setWeatherData(data)
                     setCity("")
-                    return api;
                 }
-            ).then(
-              
             )
         }
     }
@@ -54,7 +66,7 @@ function App() {
               <div>
                 <p>{weatherData.name}</p>
                 <p>{Math.round(weatherData.main.temp)}</p>
-                <p>{weatherData.weather[0].main}</p>
+                <p>{weatherData.weather[0].description}</p>
               </div>
             )}
     </div>
