@@ -55,8 +55,8 @@ import React, {useState} from "react";
                     </div>
                 ) : (
                     <div>
-                        <p>Stad: {weatherData.name}</p>
-                        <p>{Math.round(weatherData.main.temp)} grader</p>
+                        <h2>Stad: {weatherData.name}</h2>
+                        <p>Temperatur: {Math.round(weatherData.main.temp)} grader</p>
                         <p>{weatherData.weather[0].description}</p>
                     </div>
                 )}
@@ -66,5 +66,6 @@ import React, {useState} from "react";
 
 }
 export default Api;
+
 
 

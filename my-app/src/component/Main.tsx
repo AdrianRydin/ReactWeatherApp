@@ -1,9 +1,9 @@
 import React from 'react';
 import './Main.css'
-import Error from "./ErrorBoundry";
+import { Link } from "react-router-dom";
 
 
-class ChangeCity extends React.Component {
+class Main extends React.Component {
 
     render() {
         return (
@@ -14,50 +14,49 @@ class ChangeCity extends React.Component {
                         <li>Temperatur</li>
                         <li>Vindhastighet</li>
                         <li>Nederbörd</li>
-                        <li>Visa mer
+                            <Link to="ShowMonday">Visa mer
                             <span className="material-icons main-icon">
-                                    chevron_right</span>
-                        </li>
+                                    chevron_right</span></Link>
                     </ul>
                     <ul className="weekDayList">
                         <li className="dayOfTheWeek">Tisdag</li>
                         <li>Temperatur</li>
                         <li>Vindhastighet</li>
                         <li>Nederbörd</li>
-                        <li>Visa mer
+                        <Link to="ShowTuesday">Visa mer
                             <span className="material-icons main-icon">
-                                    chevron_right</span>
-                        </li>
+                                    chevron_right</span></Link>
+
                     </ul>
                     <ul className="weekDayList">
                         <li className="dayOfTheWeek">Onsdag</li>
                         <li>Temperatur</li>
                         <li>Vindhastighet</li>
                         <li>Nederbörd</li>
-                        <li>Visa mer
+                        <Link to="ShowWednesday">Visa mer
                             <span className="material-icons main-icon">
-                                    chevron_right</span>
-                        </li>
+                                    chevron_right</span></Link>
+
                     </ul>
                     <ul className="weekDayList">
                         <li className="dayOfTheWeek">Torsdag</li>
                         <li>Temperatur</li>
                         <li>Vindhastighet</li>
                         <li>Nederbörd</li>
-                        <li>Visa mer
+                        <Link to="ShowThursday">Visa mer
                             <span className="material-icons main-icon">
-                                    chevron_right</span>
-                        </li>
+                                    chevron_right</span></Link>
+
                     </ul>
                     <ul className="weekDayList">
                         <li className="dayOfTheWeek">Fredag</li>
                         <li>Temperatur</li>
                         <li>Vindhastighet</li>
                         <li>Nederbörd</li>
-                        <li>Visa mer
+                        <Link to="ShowFriday">Visa mer
                             <span className="material-icons main-icon">
-                                    chevron_right</span>
-                        </li>
+                                    chevron_right</span></Link>
+
                     </ul>
                 </main>
             </div>
@@ -65,4 +64,4 @@ class ChangeCity extends React.Component {
     }
 }
 
-export default ChangeCity;
+export default Main;
