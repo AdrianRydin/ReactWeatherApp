@@ -1,6 +1,6 @@
 import React from 'react';
 import './Main.css'
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 class Main extends React.Component {
@@ -14,18 +14,16 @@ class Main extends React.Component {
                         <li>Temperatur</li>
                         <li>Vindhastighet</li>
                         <li>Nederbörd</li>
-                            <Link to="ShowMonday">Visa mer
-                            <span className="material-icons main-icon">
-                                    chevron_right</span></Link>
+                        <Link className="LinkShowMore" to="ShowMonday">Visa mer</Link>
+                        <span className="material-icons main-icon">chevron_right</span>
                     </ul>
                     <ul className="weekDayList">
                         <li className="dayOfTheWeek">Tisdag</li>
                         <li>Temperatur</li>
                         <li>Vindhastighet</li>
                         <li>Nederbörd</li>
-                        <Link to="ShowTuesday">Visa mer
-                            <span className="material-icons main-icon">
-                                    chevron_right</span></Link>
+                        <Link className="LinkShowMore" to="ShowTuesday">Visa mer</Link>
+                        <span className="material-icons main-icon">chevron_right</span>
 
                     </ul>
                     <ul className="weekDayList">
@@ -33,9 +31,8 @@ class Main extends React.Component {
                         <li>Temperatur</li>
                         <li>Vindhastighet</li>
                         <li>Nederbörd</li>
-                        <Link to="ShowWednesday">Visa mer
-                            <span className="material-icons main-icon">
-                                    chevron_right</span></Link>
+                        <Link className="LinkShowMore" to="ShowWednesday">Visa mer</Link>
+                        <span className="material-icons main-icon">chevron_right</span>
 
                     </ul>
                     <ul className="weekDayList">
@@ -43,9 +40,8 @@ class Main extends React.Component {
                         <li>Temperatur</li>
                         <li>Vindhastighet</li>
                         <li>Nederbörd</li>
-                        <Link to="ShowThursday">Visa mer
-                            <span className="material-icons main-icon">
-                                    chevron_right</span></Link>
+                        <Link className="LinkShowMore" to="ShowThursday">Visa mer</Link>
+                        <span className="material-icons main-icon">chevron_right</span>
 
                     </ul>
                     <ul className="weekDayList">
@@ -53,9 +49,8 @@ class Main extends React.Component {
                         <li>Temperatur</li>
                         <li>Vindhastighet</li>
                         <li>Nederbörd</li>
-                        <Link to="ShowFriday">Visa mer
-                            <span className="material-icons main-icon">
-                                    chevron_right</span></Link>
+                        <Link className="LinkShowMore" to="ShowFriday">Visa mer</Link>
+                        <span className="material-icons main-icon">chevron_right</span>
 
                     </ul>
                 </main>
