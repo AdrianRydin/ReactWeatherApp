@@ -1,34 +1,68 @@
-import react from 'react';
+import React from 'react';
 import './Main.css'
+import Error from "./ErrorBoundry";
 
-export default function Main() {
-    return (
-        <div>
-        <main>
-            <h2>Göteborg</h2>
 
-            <div className="hamburger">
-                <ul className="hamburger-content">
-                    <li>Göteborg</li>
-                    <li>Stockholm</li>
-                    <li>Malmö</li>
-                    <li>Umeå</li>
-                </ul>
+class ChangeCity extends React.Component {
+
+    render() {
+        return (
+            <div className="main-container">
+                <main>
+                    <ul className="weekDayList">
+                        <li className="dayOfTheWeek">Måndag</li>
+                        <li>Temperatur</li>
+                        <li>Vindhastighet</li>
+                        <li>Nederbörd</li>
+                        <li>Visa mer
+                            <span className="material-icons main-icon">
+                                    chevron_right</span>
+                        </li>
+                    </ul>
+                    <ul className="weekDayList">
+                        <li className="dayOfTheWeek">Tisdag</li>
+                        <li>Temperatur</li>
+                        <li>Vindhastighet</li>
+                        <li>Nederbörd</li>
+                        <li>Visa mer
+                            <span className="material-icons main-icon">
+                                    chevron_right</span>
+                        </li>
+                    </ul>
+                    <ul className="weekDayList">
+                        <li className="dayOfTheWeek">Onsdag</li>
+                        <li>Temperatur</li>
+                        <li>Vindhastighet</li>
+                        <li>Nederbörd</li>
+                        <li>Visa mer
+                            <span className="material-icons main-icon">
+                                    chevron_right</span>
+                        </li>
+                    </ul>
+                    <ul className="weekDayList">
+                        <li className="dayOfTheWeek">Torsdag</li>
+                        <li>Temperatur</li>
+                        <li>Vindhastighet</li>
+                        <li>Nederbörd</li>
+                        <li>Visa mer
+                            <span className="material-icons main-icon">
+                                    chevron_right</span>
+                        </li>
+                    </ul>
+                    <ul className="weekDayList">
+                        <li className="dayOfTheWeek">Fredag</li>
+                        <li>Temperatur</li>
+                        <li>Vindhastighet</li>
+                        <li>Nederbörd</li>
+                        <li>Visa mer
+                            <span className="material-icons main-icon">
+                                    chevron_right</span>
+                        </li>
+                    </ul>
+                </main>
             </div>
-            <ul className="weekDayList">
-                <li className="dayOfTheWeek">Måndag</li>
-                <li className="infoWeekDay">Temperatur Vindhastighet Nederbörd Visa mer</li>
-                <li className="dayOfTheWeek">Tisdag</li>
-                <li className="infoWeekDay">Temperatur Vindhastighet Nederbörd Visa mer</li>
-                <li className="dayOfTheWeek">Onsdag</li>
-                <li className="infoWeekDay">Temperatur Vindhastighet Nederbörd Visa mer</li>
-                <li className="dayOfTheWeek">Torsdag</li>
-                <li className="infoWeekDay">Temperatur Vindhastighet Nederbörd Visa mer</li>
-                <li className="dayOfTheWeek">Fredag</li>
-                <li className="infoWeekDay">Temperatur Vindhastighet Nederbörd Visa mer</li>
-            </ul>
-        </main>
-        </div>
-    )
-
+        )
+    }
 }
+
+export default ChangeCity;
