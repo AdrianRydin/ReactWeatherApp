@@ -3,6 +3,7 @@ import {render} from "react-dom";
 import './App.css';
 import Header from './component/Header';
 import Main from './component/Main';
+import Footer from "./component/Footer";
 import Api from "./component/Api";
 import {Routes, Route} from "react-router-dom";
 import ShowMonday from "./pages/ShowMonday"
@@ -31,6 +32,7 @@ function App() {
                         <Route path="/ShowThursday" element={<ShowThursday/>}/>
                         <Route path="/ShowFriday" element={<ShowFriday/>}/>
                 </Routes>
+            <Footer />
         </div>
     )
 }
