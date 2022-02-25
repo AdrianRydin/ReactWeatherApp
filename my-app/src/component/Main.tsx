@@ -3,7 +3,7 @@ import './Main.css'
 import {Link} from "react-router-dom";
 
 
- export default class Main extends React.Component {
+export default class Main extends React.Component {
 
     render() {
         return (
@@ -50,6 +50,10 @@ import {Link} from "react-router-dom";
                         <Link className="LinkShowMore" to="/ShowFriday">Visa mer</Link>
                         <span className="material-icons main-icon">chevron_right</span>
                     </ul>
+                    <div className="WarningsBox">
+                    <p className="WeatherWarning">Väder varningar</p>
+                    <p>Stormbyar i Södra Sverige</p>
+                    </div>
                 </main>
             </div>
         )
