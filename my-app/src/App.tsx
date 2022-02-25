@@ -13,7 +13,6 @@ import ShowThursday from "./pages/ShowThursday";
 import ShowFriday from "./pages/ShowFriday";
 import Error from "./component/ErrorBoundry";
 
-
 function App() {
     return (
         <div className="App">
