@@ -4,7 +4,7 @@ import './App.css';
 import Header from './component/Header';
 import Main from './component/Main';
 import Api from "./component/Api";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import ShowMonday from "./pages/ShowMonday"
 import ShowTuesday from "./pages/ShowTuesday"
 import ShowWednesday from "./pages/ShowWednesday";
@@ -17,20 +17,17 @@ function App() {
         <div className="App">
             <Header/>
             <Api/>
-
-            <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Main/>}>
-                        <Route path="/Monday" element={<ShowMonday/>}/>
-                        <Route path="/Tuesday" element={<ShowTuesday/>}/>
-                        <Route path="/Wednesday" element={<ShowWednesday/>}/>
-                        <Route path="/Thursday" element={<ShowThursday/>}/>
-                        <Route path="/Friday" element={<ShowFriday/>}/>
-                    </Route>
-                </Routes>
-            </BrowserRouter>
-        </div>
+                    <Route path="/" element={<Main/>}/>
+                        <Route path="/" element={<Header/>}/>
+                        <Route path="/ShowMonday" element={<ShowMonday/>}/>
+                        <Route path="/ShowTuesday" element={<ShowTuesday/>}/>
+                        <Route path="/ShowWednesday" element={<ShowWednesday/>}/>
+                        <Route path="/ShowThursday" element={<ShowThursday/>}/>
+                        <Route path="/ShowFriday" element={<ShowFriday/>}/>
 
+                </Routes>
+        </div>
     )
 }
 

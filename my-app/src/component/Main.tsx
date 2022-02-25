@@ -3,7 +3,7 @@ import './Main.css'
 import {Link} from "react-router-dom";
 
 
-class Main extends React.Component {
+ export default class Main extends React.Component {
 
     render() {
         return (
@@ -14,7 +14,7 @@ class Main extends React.Component {
                         <li>Temperatur</li>
                         <li>Vindhastighet</li>
                         <li>Nederbörd</li>
-                        <Link className="LinkShowMore" to="ShowMonday">Visa mer</Link>
+                        <Link className="LinkShowMore" to="/ShowMonday">Visa mer</Link>
                         <span className="material-icons main-icon">chevron_right</span>
                     </ul>
                     <ul className="weekDayList">
@@ -22,36 +22,32 @@ class Main extends React.Component {
                         <li>Temperatur</li>
                         <li>Vindhastighet</li>
                         <li>Nederbörd</li>
-                        <Link className="LinkShowMore" to="ShowTuesday">Visa mer</Link>
+                        <Link className="LinkShowMore" to="/ShowTuesday">Visa mer</Link>
                         <span className="material-icons main-icon">chevron_right</span>
-
                     </ul>
                     <ul className="weekDayList">
                         <li className="dayOfTheWeek">Onsdag</li>
                         <li>Temperatur</li>
                         <li>Vindhastighet</li>
                         <li>Nederbörd</li>
-                        <Link className="LinkShowMore" to="ShowWednesday">Visa mer</Link>
+                        <Link className="LinkShowMore" to="/ShowWednesday">Visa mer</Link>
                         <span className="material-icons main-icon">chevron_right</span>
-
                     </ul>
                     <ul className="weekDayList">
                         <li className="dayOfTheWeek">Torsdag</li>
                         <li>Temperatur</li>
                         <li>Vindhastighet</li>
                         <li>Nederbörd</li>
-                        <Link className="LinkShowMore" to="ShowThursday">Visa mer</Link>
+                        <Link className="LinkShowMore" to="/ShowThursday">Visa mer</Link>
                         <span className="material-icons main-icon">chevron_right</span>
-
                     </ul>
                     <ul className="weekDayList">
                         <li className="dayOfTheWeek">Fredag</li>
                         <li>Temperatur</li>
                         <li>Vindhastighet</li>
                         <li>Nederbörd</li>
-                        <Link className="LinkShowMore" to="ShowFriday">Visa mer</Link>
+                        <Link className="LinkShowMore" to="/ShowFriday">Visa mer</Link>
                         <span className="material-icons main-icon">chevron_right</span>
-
                     </ul>
                 </main>
             </div>
@@ -59,4 +55,3 @@ class Main extends React.Component {
     }
 }
 
-export default Main;

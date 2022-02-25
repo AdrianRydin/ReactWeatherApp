@@ -2,7 +2,9 @@ import React from "react";
 
 function ShowTuesday() {
     return (
-        <div></div>
+        <div>
+            <h2>Tisdag</h2>
+        </div>
     )
 }
 
