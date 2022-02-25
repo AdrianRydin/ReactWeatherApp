@@ -1,13 +1,12 @@
 import React from 'react';
 import './Header.css';
+import {Link} from "react-router-dom";
 
 export default function Header(){
     return(
         <div>
     <header>
-        <h1>
-            Weather App
-        </h1>
+        <Link className="LinkStart" to="/">Weather App</Link>
         <span className="material-icons" id="hamburgerIcon">
         menu
         </span>
