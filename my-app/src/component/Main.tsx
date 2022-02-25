@@ -9,6 +9,7 @@ import {Link} from "react-router-dom";
         return (
             <div className="main-container">
                 <main>
+
                     <ul className="weekDayList">
                         <li className="dayOfTheWeek">Måndag</li>
                         <li>Temperatur</li>

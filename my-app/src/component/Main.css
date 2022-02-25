@@ -16,17 +16,15 @@
     font-size: 2rem;
 }
 
-main, li {
+.weekDayList, li {
     padding: 1rem 0 1rem 4rem;
 }
-
 
 .main-icon {
 
     height: 2rem;
     width: 2rem;
     padding: 0 0 1.7rem 0;
-
 }
 
 .hamburger {
@@ -36,7 +34,7 @@ main, li {
     position: absolute;
     background: rgb(25, 25, 25);
     top: 0;
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
     align-items: center;
     display: none;
@@ -62,5 +60,25 @@ main, li {
 
 .LinkShowMore:hover {
     color: red;
+}
+
+
+@media screen and (max-width: 800px){
+    .weekDayList {
+        flex-direction: column;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    .weekDayList, li {
+        padding: 2rem 0 0 0;
+    }
+
+    .LinkShowMore {
+        padding: 2rem 0 0 0;
+    }
+
 }
 

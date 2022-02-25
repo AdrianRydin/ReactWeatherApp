@@ -10,13 +10,18 @@ import ShowTuesday from "./pages/ShowTuesday"
 import ShowWednesday from "./pages/ShowWednesday";
 import ShowThursday from "./pages/ShowThursday";
 import ShowFriday from "./pages/ShowFriday";
+import Error from "./component/ErrorBoundry";
 
 
 function App() {
     return (
         <div className="App">
             <Header/>
+
+            <Error>
             <Api/>
+            </Error>
+
                 <Routes>
                     <Route path="/" element={<Main/>}/>
                         <Route path="/" element={<Header/>}/>
@@ -25,7 +30,6 @@ function App() {
                         <Route path="/ShowWednesday" element={<ShowWednesday/>}/>
                         <Route path="/ShowThursday" element={<ShowThursday/>}/>
                         <Route path="/ShowFriday" element={<ShowFriday/>}/>
-
                 </Routes>
         </div>
     )
