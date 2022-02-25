@@ -1,6 +1,19 @@
-
+.PagesContainer {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-size: 1.5rem;
+}
 
 .DetailPages {
     list-style: none;
     padding: 0;
+}
+
+@media screen and (max-width: 500px) {
+    .PagesContainer {
+        width: 300px;
+    }
+
 }
