@@ -1,4 +1,4 @@
-import React, { ReactNode, ErrorInfo, Component } from 'react';
+import React, { ReactNode } from 'react';
 
 interface Props {
     children: ReactNode;
@@ -8,7 +8,7 @@ interface State {
     hasError: Boolean;
 }
 
-class Error extends React.Component<Props, State> {
+export default class Error extends React.Component<Props, State> {
     state: State = {
         hasError: false
     }
@@ -26,4 +26,3 @@ class Error extends React.Component<Props, State> {
 
 }
 
-export default Error;

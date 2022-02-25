@@ -1,9 +1,3 @@
-h1{
-    text-align:center;
-    position: absolute;
-    align-self: center;
-}
-
 .material-icons{
     font-family: 'Material Icons';
     font-size: 32px;
@@ -19,4 +13,13 @@ header{
     flex-direction: column;
     position: relative;
     min-height: 10vh;
+
+}
+
+.LinkStart {
+    text-decoration: none;
+    font-size: 3rem;
+    color: black;
+    position: absolute;
+    align-self: center;
 }

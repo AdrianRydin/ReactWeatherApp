@@ -1,21 +1,37 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import {render} from "react-dom";
 import './App.css';
 import Header from './component/Header';
 import Main from './component/Main';
+import Footer from "./component/Footer";
 import Api from "./component/Api";
-
-
-// import REACT_APP_TOKEN  from "react-dotenv";
-// import API from './component/Api';
-// import Weather from './component/Api';
+import {Routes, Route} from "react-router-dom";
+import ShowMonday from "./pages/ShowMonday"
+import ShowTuesday from "./pages/ShowTuesday"
+import ShowWednesday from "./pages/ShowWednesday";
+import ShowThursday from "./pages/ShowThursday";
+import ShowFriday from "./pages/ShowFriday";
+import Error from "./component/ErrorBoundry";
 
 function App() {
     return (
         <div className="App">
             <Header/>
-            <Api />
-            <Main/>
+
+            <Error>
+            <Api/>
+            </Error>
+
+                <Routes>
+                    <Route path="/" element={<Main/>}/>
+                        <Route path="/" element={<Header/>}/>
+                        <Route path="/ShowMonday" element={<ShowMonday/>}/>
+                        <Route path="/ShowTuesday" element={<ShowTuesday/>}/>
+                        <Route path="/ShowWednesday" element={<ShowWednesday/>}/>
+                        <Route path="/ShowThursday" element={<ShowThursday/>}/>
+                        <Route path="/ShowFriday" element={<ShowFriday/>}/>
+                </Routes>
+            <Footer />
         </div>
     )
 }
