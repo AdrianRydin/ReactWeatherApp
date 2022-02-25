@@ -40,15 +40,6 @@ import React, {useState} from "react";
         }
         return (
             <div className="Api">
-
-                {/* <Weather /> */}
-                <input
-                    className="input"
-                    placeholder="Skriv en stad..."
-                    onChange={e => setCity(e.target.value)}
-                    value={city}
-                    onKeyPress={getWeather}
-                />
                 {typeof weatherData.main === 'undefined' ? (
                     <div>
                         <p>Välkommen till Weather app! Skriv en stad för att se vädret!</p>
@@ -60,6 +51,15 @@ import React, {useState} from "react";
                         <p>{weatherData.weather[0].description}</p>
                     </div>
                 )}
+                {/* <Weather /> */}
+                <input
+                    className="input"
+                    placeholder="Skriv en stad..."
+                    onChange={e => setCity(e.target.value)}
+                    value={city}
+                    onKeyPress={getWeather}
+                />
+
 
             </div>
         );
