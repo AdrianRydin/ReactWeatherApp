@@ -10,22 +10,25 @@
     "@types/node": "^16.11.25",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
+    "dayjs": "^1.10.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-dotenv": "^0.1.0",
     "react-scripts": "5.0.0",
     "typescript": "^4.5.5",
-    "web-vitals": "^2.1.4",
-    "react-dotenv": "^0.1.0"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start": "react-dotenv && react-scripts start",
-    "build": "react-dotenv && react-scripts build", 
-    "serve": "react-dotenv && serve build" 
+    "build": "react-dotenv && react-scripts build",
+    "serve": "react-dotenv && serve build"
   },
   "react-dotenv": {
-    "whitelist": ["API_URL"]
+    "whitelist": [
+      "API_URL"
+    ]
   },
   "eslintConfig": {
     "extends": [

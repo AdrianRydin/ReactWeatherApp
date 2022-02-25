@@ -10,7 +10,6 @@ import Api from "./component/Api";
 // import API from './component/Api';
 // import Weather from './component/Api';
 
-
 function App() {
     return (
         <div className="App">
