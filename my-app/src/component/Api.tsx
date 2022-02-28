@@ -55,41 +55,7 @@ function Api(state: State) {
     let lastday = new Date(date.setDate(last)).toDateString().substring(0,3);
 
 
-        const getWeather = (event: { key: string; }) => {
-            if (event.key === "Enter") {
-                fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${APIKey}&lang=se`)
-                    .then(
-                        response => response.json()
-                    ).then(
-                    data => {
-                        setWeatherData(data)
-                        setCity("")
-                    }
-                )
-            }
-        }
-        return (
-            <div className="Api">
-                {typeof weatherData.main === 'undefined' ? (
-                    <div>
-                        <p>Välkommen till Weather app! Skriv en stad för att se vädret!</p>
-                    </div>
-                ) : (
-                    <div>
-                        <h2>Stad: {weatherData.name}</h2>
-                        <p>Temperatur: {Math.round(weatherData.main.temp)} grader</p>
-                        <p>{weatherData.weather[0].description}</p>
-                    </div>
-                )}
-                {/* <Weather /> */}
-                <input
-                    className="input"
-                    placeholder="Skriv en stad..."
-                    onChange={e => setCity(e.target.value)}
-                    value={city}
-                    onKeyPress={getWeather}
 
-                />
 
     // let days = [today, tomorrow, thirdDay, fourthDay, lastday];
     let day = date.getDay();
@@ -108,15 +74,8 @@ function Api(state: State) {
             />
             {typeof weatherData.list ==='undefined' ?(
                 <div>
-
-
-
-
-            </div>
-        );
-
                 </div>
-            ): (
+                ):(
                 <div>
                     <h2>Stad: {weatherData.city.name}</h2>
                     <h3>Idag</h3>
