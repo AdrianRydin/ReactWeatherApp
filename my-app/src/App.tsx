@@ -12,6 +12,7 @@ import ShowWednesday from "./pages/ShowWednesday";
 import ShowThursday from "./pages/ShowThursday";
 import ShowFriday from "./pages/ShowFriday";
 import Error from "./component/ErrorBoundry";
+import SaveCityToLS from "./component/saveLS";
 
 function App() {
     return (
@@ -19,19 +20,23 @@ function App() {
             <Header/>
 
             <Error>
-            <Api/>
+                <Api/>
             </Error>
-
-                <Routes>
-                    <Route path="/" element={<Main/>}/>
-                        <Route path="/" element={<Header/>}/>
-                        <Route path="/ShowMonday" element={<ShowMonday/>}/>
-                        <Route path="/ShowTuesday" element={<ShowTuesday/>}/>
-                        <Route path="/ShowWednesday" element={<ShowWednesday/>}/>
-                        <Route path="/ShowThursday" element={<ShowThursday/>}/>
-                        <Route path="/ShowFriday" element={<ShowFriday/>}/>
-                </Routes>
-            <Footer />
+            <Error>
+                <SaveCityToLS/>
+            </Error>
+            <Error>
+            <Routes>
+                <Route path="/" element={<Main/>}/>
+                <Route path="/" element={<Header/>}/>
+                <Route path="/ShowMonday" element={<ShowMonday/>}/>
+                <Route path="/ShowTuesday" element={<ShowTuesday/>}/>
+                <Route path="/ShowWednesday" element={<ShowWednesday/>}/>
+                <Route path="/ShowThursday" element={<ShowThursday/>}/>
+                <Route path="/ShowFriday" element={<ShowFriday/>}/>
+            </Routes>
+            </Error>
+            <Footer/>
         </div>
     )
 }
