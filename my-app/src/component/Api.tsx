@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import SaveCityToLS from "./saveLS";
 
     interface WeatherData {
 
@@ -58,7 +59,10 @@ import React, {useState} from "react";
                     onChange={e => setCity(e.target.value)}
                     value={city}
                     onKeyPress={getWeather}
+
                 />
+
+
 
 
             </div>

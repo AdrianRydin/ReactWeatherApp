@@ -19,7 +19,7 @@ export default class Error extends React.Component<Props, State> {
 
     render() {
        if (this.state.hasError) {
-        return <p>Kan inte hitta informationen</p>
+        return <p>Något gick fel!</p>
        }  
        return this.props.children;
     }
