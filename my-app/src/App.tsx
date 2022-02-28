@@ -14,7 +14,6 @@ import ShowFriday from "./pages/ShowFriday";
 import Error from "./component/ErrorBoundry";
 import SaveCityToLS from "./component/saveLS";
 
-
 function App() {
     return (
         <div className="App">
