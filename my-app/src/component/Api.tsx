@@ -82,7 +82,6 @@ function Api(state: State) {
                     <p>Temperatur: {Math.round(weatherData.list[0].main.temp)} grader</p>
                     <p>Väder: {weatherData.list[0].weather[0].description}</p>
 
-
                     <h3>Imorgon</h3>
                     <p>Temperatur: {Math.round(weatherData.list[1].main.temp)} grader</p>
                     <p>Väder: {weatherData.list[1].weather[0].description}</p>

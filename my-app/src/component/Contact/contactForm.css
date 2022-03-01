@@ -1,0 +1,22 @@
+.contactContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+}
+
+.InputContent {
+    height: 13rem;
+}
+
+.labelForm {
+    margin: 2rem 0 2rem 0;
+}
+
+.errorMessage {
+color: red;
+}

@@ -1,20 +1,19 @@
 import React from "react";
 import './pages.css';
 
-function ShowTuesday() {
+export default function ShowTuesday() {
     return (
         <div className="PagesContainer">
-            <h2>Tisdag</h2>
+            <h2>Tuesday</h2>
             <ul className="DetailPages">
-                <li>Temperatur: </li>
-                <li>Nederbörd: </li>
-                <li>Vind: </li>
-                <li>Luftfuktighet: </li>
-                <li>Soluppgång: </li>
-                <li>Soluppgång: </li>
+                <li>Temperature: </li>
+                <li>Rainfall: </li>
+                <li>Wind: </li>
+                <li>Humidity: </li>
+                <li>Sunrise: </li>
+                <li>Sunset: </li>
             </ul>
         </div>
     )
 }
 
-export default ShowTuesday
