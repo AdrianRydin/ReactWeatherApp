@@ -1,7 +1,6 @@
 .main-container {
     display: flex;
     justify-content: center;
-
 }
 
 .weekDayList {
@@ -21,7 +20,6 @@
 }
 
 .main-icon {
-
     height: 2rem;
     width: 2rem;
     padding: 0 0 1.7rem 0;
@@ -72,6 +70,7 @@
     font-size: 1.5rem;
     font-weight: bold;
 }
+
 
 
 @media screen and (max-width: 800px){
