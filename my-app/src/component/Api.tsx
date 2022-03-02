@@ -7,7 +7,7 @@ interface State {
 
 }
 
-function Api(state: State) {
+export default function Api(state: State) {
     //Väder API
     
     const APIKey = "661acb0f32a6cfbc4b06bb0c529a83aa";
@@ -99,5 +99,4 @@ function Api(state: State) {
         </div>
     );
 }
-
-export default Api;
+// export default Api;
