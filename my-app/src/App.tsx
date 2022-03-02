@@ -1,9 +1,9 @@
 import React from "react";
 import './App.css';
 import Header from './component/Header/Header';
-import Main from './component/Main/Main';
+import {Main} from './component/Main/Main';
 import Footer from "./component/Footer/Footer";
-import Api from "./component/Api";
+import {Api} from "./component/Api";
 import {Routes, Route} from "react-router-dom";
 import ShowMonday from "./pages/ShowMonday"
 import ShowTuesday from "./pages/ShowTuesday"
@@ -15,14 +15,13 @@ import SaveCityToLS from "./component/saveLS";
 import ContactForm from "./component/Contact/ContactForm";
 
 
-
 function App() {
     return (
         <div className="App">
             <Header/>
-
+            {/* <Main/> */}
             <Error>
-                <Api/>
+                <Api/> 
             </Error>
 
             <Error>
@@ -38,7 +37,7 @@ function App() {
                 <Route path="/ShowWednesday" element={<ShowWednesday />} />
                 <Route path="/ShowThursday" element={<ShowThursday />} />
                 <Route path="/ShowFriday" element={<ShowFriday />} />
-                <Route path="/Contact" element={<ContactForm />} />
+                {/* <Route path="/Contact" element={<ContactForm />} /> */}
             </Routes>
             </Error>
 

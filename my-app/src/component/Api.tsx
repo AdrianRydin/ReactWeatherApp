@@ -1,19 +1,18 @@
 import React, {useState} from "react";
 import SaveCityToLS from "./saveLS";
 
+
 interface State {
     main?: string
     name?: string
     weather?: string
-
 }
 
-function Api(state: State) {
+ export function Api() {
     //Väder API
-    
-    const APIKey = "661acb0f32a6cfbc4b06bb0c529a83aa";
-    const [weatherData, setWeatherData] = useState([{}])
-    const [city, setCity] = useState("")
+     const APIKey = "661acb0f32a6cfbc4b06bb0c529a83aa";
+     const [weatherData, setWeatherData] = useState([{}])
+     const [city, setCity] = useState("")
 
     const getWeather = (event: { key: string; }) => {
         if (event.key === "Enter") {
@@ -38,7 +37,7 @@ function Api(state: State) {
 
     let date = new Date;
     
-    let first = date.getDate() - date.getDay() + 5;
+    let first = date.getDate() - date.getDay() + 3;
     let second = first + 1;
     let third = first + 2;
     let fourth = first + 3;
@@ -64,14 +63,14 @@ function Api(state: State) {
 
     return (
         <div className="ApiContainer">
-            <p>Välkommen till Weather app! Skriv en stad för att se vädret!</p>
-            <input
+            {/* <p>Välkommen till Weather app! Skriv en stad för att se vädret!</p> */}
+            {/* <input
                 className="input"
                 placeholder="Skriv en stad..."
                 onChange={e => setCity(e.target.value)}
                 value={city}
                 onKeyPress={getWeather}
-            />
+            /> */}
             {typeof weatherData.list ==='undefined' ?(
                 <div>
                 </div>
@@ -104,4 +103,4 @@ function Api(state: State) {
     );
 }
 
-export default Api;
+// export function Api();
