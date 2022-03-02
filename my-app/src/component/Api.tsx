@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import SaveCityToLS from "./saveLS";
+import Error from "./ErrorBoundry/ErrorBoundry";
 
 interface State {
     main?: string
@@ -59,7 +60,7 @@ function Api(state: State) {
 
     // let days = [today, tomorrow, thirdDay, fourthDay, lastday];
     let day = date.getDay();
-    
+
 
 
     return (
@@ -72,6 +73,7 @@ function Api(state: State) {
                 value={city}
                 onKeyPress={getWeather}
             />
+
             {typeof weatherData.list ==='undefined' ?(
                 <div>
                 </div>
@@ -98,8 +100,11 @@ function Api(state: State) {
                     <p>Temperatur: {Math.round(weatherData.list[4].main.temp)} grader</p>
                     <p>Väder: {weatherData.list[4].weather[0].description}</p>
                 </div>
-            )}
 
+            )}
+            <Error>
+            <SaveCityToLS/>
+            </Error>
         </div>
     );
 }
