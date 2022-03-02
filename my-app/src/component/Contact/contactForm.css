@@ -1,6 +1,7 @@
 .contactContainer {
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .contactForm {
@@ -10,7 +11,8 @@
 }
 
 .InputContent {
-    height: 13rem;
+    width: 15rem;
+    height: 5rem;
 }
 
 .labelForm {
@@ -18,5 +20,21 @@
 }
 
 .errorMessage {
-color: red;
+color: #FF0000;
+}
+
+.TextContent {
+    margin: 1rem 0;
+    height: 5rem;
+    width: 25rem;
+    border: #000000 solid 1px;
+}
+
+.inputField {
+    width: 15rem;
+    border: #000000 solid 1px;
+}
+
+.SubmitBtn {
+    margin-bottom: 1rem;
 }

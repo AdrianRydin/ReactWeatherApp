@@ -1,6 +1,7 @@
 .main-container {
     display: flex;
     justify-content: center;
+
 }
 
 .weekDayList {
@@ -30,7 +31,7 @@
     width: 25%;
     right: 0;
     position: absolute;
-    background: rgb(25, 25, 25);
+    background: #000000;
     top: 0;
     /*display: flex;*/
     justify-content: center;
@@ -39,7 +40,7 @@
 }
 
 .hamburger-content {
-    color: white;
+    color: #FFFFFF;
     list-style: none;
     justify-content: space-around;
     align-items: center;
@@ -51,22 +52,22 @@
 }
 
 .LinkShowMore {
-    color: black;
+    color: #000000;
     padding: 1rem 0 0 2rem;
     text-decoration: none;
 }
 
 .LinkShowMore:hover {
-    color: red;
+    color: #FF0000;
 }
 
 .WarningsBox {
-    border: solid red 2px;
+    border: solid #FF0000 2px;
     margin-bottom: 2rem;
 }
 
 .WeatherWarning {
-    border-bottom: red solid 1px;
+    border-bottom: #FF0000 solid 1px;
     font-size: 1.5rem;
     font-weight: bold;
 }

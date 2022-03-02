@@ -1,37 +1,32 @@
-import { useFormik } from "formik";
+import {useFormik} from "formik";
 import * as Yup from "yup";
 import "./contactForm.css";
+import InputField from "./InputField";
+import {TextField} from "./InputField";
 
-type CreateForm = Omit<Post, "id">
-type PostSchemaType = Record<keyof CreateForm, Yup.AnySchema>;
+type PostSchemaType = Record<keyof Form, Yup.AnySchema>;
 
 const PostSchema = Yup.object().shape<PostSchemaType>({
     name: Yup.string().min(4).max(20).required(),
     content: Yup.string().min(5).max(100).required(),
 })
 
-export interface Post {
+export interface Form {
     name: string
     content: string
 }
 
-interface Props {
-    defaultForm?: Post;
-    onSubmit: (form: CreateForm) => void
-}
-
-const emptyForm: CreateForm = {
-    name: "",
-    content: ""
+export interface Props {
+    onSubmit: (form: Form) => void;
 }
 
 export default function ContactForm(props: Props) {
-    const { errors, handleSubmit, handleChange, handleBlur } =
+    const {errors, touched, handleSubmit, handleChange, handleBlur} =
         useFormik({
-            initialValues: props.defaultForm || emptyForm,
+            initialValues: {name: "", content: ""},
             validationSchema: PostSchema,
-            onSubmit: (post, { resetForm }) => {
-                props.onSubmit(post);
+            onSubmit: (form, {resetForm}) => {
+                props.onSubmit(form);
                 resetForm();
             }
         })
@@ -39,26 +34,29 @@ export default function ContactForm(props: Props) {
     return (
         <div className="contactContainer">
             <form onSubmit={handleSubmit} className="contactForm">
-                <label className="labelForm">Name</label>
-                <input
+                <InputField
+                    label="name"
+                    placeholder="Name..."
+                    className="inputField"
+                    id="name"
                     type="text"
                     name="name"
                     onChange={handleChange}
                     onBlur={handleBlur}
+                    error={touched.name && errors.name}
                 />
-                {errors.name}
 
-
-                <label className="labelForm">Content</label>
-                <input
-                    className="InputContent"
-                    type="text"
+                <TextField
+                    label="content"
+                    className="TextContent"
+                    placeholder="Write your content..."
+                    id="content"
                     name="content"
                     onChange={handleChange}
                     onBlur={handleBlur}
+                error={touched.content && errors.content}
                 />
-                {errors.content}
-                <button type="submit">Send</button>
+                <button className="SubmitBtn" type="submit">Send</button>
 
             </form>
 

@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 export default function Header(){
     return(
-        <div>
+        <div className="HeaderContainer">
     <header>
         <Link className="LinkStart" to="/">Väder App</Link>
         <span className="material-icons" id="hamburgerIcon">

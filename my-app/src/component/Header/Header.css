@@ -6,7 +6,7 @@
 }
 
 header{
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #000000;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@ header{
 .LinkStart {
     text-decoration: none;
     font-size: 3rem;
-    color: black;
+    color: #000000;
     position: absolute;
     align-self: center;
 }
