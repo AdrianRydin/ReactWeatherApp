@@ -11,22 +11,19 @@ import ShowWednesday from "./pages/ShowWednesday";
 import ShowThursday from "./pages/ShowThursday";
 import ShowFriday from "./pages/ShowFriday";
 import Error from "./component/ErrorBoundry/ErrorBoundry";
-import SaveCityToLS from "./component/saveLS";
 import ContactForm from "./component/Contact/ContactForm";
-
+import  {Form} from "./component/Contact/ContactForm"
 
 
 function App() {
+    const handleSubmit = (newForm: Form) => {}
+
     return (
         <div className="App">
             <Header/>
 
             <Error>
                 <Api/>
-            </Error>
-
-            <Error>
-                <SaveCityToLS/>
             </Error>
 
             <Error>
@@ -38,7 +35,7 @@ function App() {
                 <Route path="/ShowWednesday" element={<ShowWednesday />} />
                 <Route path="/ShowThursday" element={<ShowThursday />} />
                 <Route path="/ShowFriday" element={<ShowFriday />} />
-                <Route path="/Contact" element={<ContactForm />} />
+                <Route path="/Contact" element={<ContactForm onSubmit={handleSubmit} />} />
             </Routes>
             </Error>
 

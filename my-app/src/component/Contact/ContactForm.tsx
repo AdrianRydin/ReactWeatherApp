@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import "./contactForm.css";
 import InputField from "./InputField";
 import {TextField} from "./InputField";
+import SaveCityToLS from "../saveLS";
 
 type PostSchemaType = Record<keyof Form, Yup.AnySchema>;
 
@@ -17,6 +18,7 @@ export interface Form {
 }
 
 export interface Props {
+    defaultForm?: Form
     onSubmit: (form: Form) => void;
 }
 
@@ -54,10 +56,9 @@ export default function ContactForm(props: Props) {
                     name="content"
                     onChange={handleChange}
                     onBlur={handleBlur}
-                error={touched.content && errors.content}
+                    error={touched.content && errors.content}
                 />
-                <button className="SubmitBtn" type="submit">Send</button>
-
+                <button type="submit">Submit</button>
             </form>
 
         </div>
