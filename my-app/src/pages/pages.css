@@ -11,6 +11,10 @@
     padding: 0;
 }
 
+.DetailListItem {
+    padding-left: 0;
+}
+
 @media screen and (max-width: 500px) {
     .PagesContainer {
         width: 300px;

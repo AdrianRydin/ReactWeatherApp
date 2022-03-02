@@ -1,10 +1,11 @@
 Footer {
-    border-top: black solid 1px;
+    border-top: #000000 solid 1px;
 
 }
 
 .ContactUs {
-    color: black;
+    color: #000000;
     padding: 1rem 0 0 2rem;
     text-decoration: none;
+    font-size: 2rem;
 }

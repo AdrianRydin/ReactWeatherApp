@@ -63,7 +63,7 @@ function Api(state: State) {
 
 
     return (
-        <div className="App">
+        <div className="ApiContainer">
             <p>Välkommen till Weather app! Skriv en stad för att se vädret!</p>
             <input
                 className="input"

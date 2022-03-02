@@ -14,6 +14,8 @@ import Error from "./component/ErrorBoundry/ErrorBoundry";
 import SaveCityToLS from "./component/saveLS";
 import ContactForm from "./component/Contact/ContactForm";
 
+
+
 function App() {
     return (
         <div className="App">
@@ -31,11 +33,11 @@ function App() {
             <Routes>
                 <Route path="/" element={<Main/>}/>
                 <Route path="/" element={<Header/>}/>
-                <Route path="/ShowMonday" element={<ShowMonday/>} />
-                <Route path="/ShowTuesday" element={<ShowTuesday/>} />
-                <Route path="/ShowWednesday" element={<ShowWednesday/>} />
-                <Route path="/ShowThursday" element={<ShowThursday/>} />
-                <Route path="/ShowFriday" element={<ShowFriday/>} />
+                <Route path="/ShowMonday" element={<ShowMonday />} />
+                <Route path="/ShowTuesday" element={<ShowTuesday />} />
+                <Route path="/ShowWednesday" element={<ShowWednesday />} />
+                <Route path="/ShowThursday" element={<ShowThursday />} />
+                <Route path="/ShowFriday" element={<ShowFriday />} />
                 <Route path="/Contact" element={<ContactForm />} />
             </Routes>
             </Error>
