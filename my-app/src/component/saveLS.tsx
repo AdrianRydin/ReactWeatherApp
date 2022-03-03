@@ -1,14 +1,22 @@
 import React from "react";
 import {LSState} from "../hooks/localstorage";
-import weatherData from "./Api"
 
 export default function SaveCityToLS() {
-    const [city, setCity] = LSState("", "city")
-
+    let [cityName, setCityName] = LSState("", "city")
 
     return (
         <div>
-            <button className="saveCityBtn" type="submit" onClick={() => setCity((weatherData.name))}>Save city </button>
+            <form>
+                <input
+                    type="text"
+                    value={cityName}
+                    onChange={(e) => setCityName(e.target.value)}
+
+                />
+                <input type="submit" value="Save"/>
+            </form>
+
+            {/*<button value={cityName} onChange={(e) => (e.target.value)}>Save city</button>*/}
         </div>
     )
 }

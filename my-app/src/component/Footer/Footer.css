@@ -1,10 +1,17 @@
 Footer {
   border-top: #000000 solid 1px;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .ContactUs {
   color: #000000;
-  padding: 1rem 0 0 2rem;
+  padding-top: 1rem;
   text-decoration: none;
   font-size: 2rem;
+}
+
+.ContactUs:hover {
+  color: #ff0000;
 }
