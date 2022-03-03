@@ -3,7 +3,6 @@ import * as Yup from "yup";
 import "./contactForm.css";
 import InputField from "./InputField";
 import {TextField} from "./InputField";
-import SaveCityToLS from "../saveLS";
 
 type PostSchemaType = Record<keyof Form, Yup.AnySchema>;
 
