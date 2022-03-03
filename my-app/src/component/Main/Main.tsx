@@ -1,7 +1,10 @@
 import React from "react";
 import "./Main.css";
 import { Link } from "react-router-dom";
-import { WeatherData } from "../Api";
+import Api, { WeatherData } from "../Api";
+import thirdDay from "../Api";
+import fourthDay from "../Api";
+import fifthDay from "../Api";
 
 interface Props {
   weatherData?: WeatherData;
@@ -17,10 +20,11 @@ export default class Main extends React.Component<Props> {
     return (
       <div className="main-container">
         <main>
+          <h2>Stad: {weatherData.city.name}</h2>
           <ul className="weekDayList">
-            <li className="dayOfTheWeek">Monday</li>
+            <li className="dayOfTheWeek">Today</li>
             <li>Temperature {Math.round(weatherData.list[0].main.temp)}</li>
-            <li>Wind speed</li>
+            <li>Weather: {weatherData.list[0].weather[0].description} </li>
             <li>Rainfall</li>
             <Link className="LinkShowMore" to="/ShowMonday">
               Show more
@@ -28,9 +32,9 @@ export default class Main extends React.Component<Props> {
             <span className="material-icons main-icon">chevron_right</span>
           </ul>
           <ul className="weekDayList">
-            <li className="dayOfTheWeek">Tuesday</li>
-            <li>Temperature</li>
-            <li>Wind speed</li>
+            <li className="dayOfTheWeek">Tomorrow</li>
+            <li>Temperature: {Math.round(weatherData.list[1].main.temp)}</li>
+            <li>Weather: {weatherData.list[1].weather[0].description}</li>
             <li>Rainfall</li>
             <Link className="LinkShowMore" to="/ShowTuesday">
               Show more
@@ -38,9 +42,9 @@ export default class Main extends React.Component<Props> {
             <span className="material-icons main-icon">chevron_right</span>
           </ul>
           <ul className="weekDayList">
-            <li className="dayOfTheWeek">Wednesday</li>
-            <li>Temperature</li>
-            <li>Wind speed</li>
+            <li className="dayOfTheWeek">{thirdDay}</li>
+            <li>Temperature: {Math.round(weatherData.list[2].main.temp)}</li>
+            <li>Weather: {weatherData.list[2].weather[0].description}</li>
             <li>Rainfall</li>
             <Link className="LinkShowMore" to="/ShowWednesday">
               Show more
@@ -48,9 +52,9 @@ export default class Main extends React.Component<Props> {
             <span className="material-icons main-icon">chevron_right</span>
           </ul>
           <ul className="weekDayList">
-            <li className="dayOfTheWeek">Thursday</li>
-            <li>Temperature</li>
-            <li>Wind speed</li>
+            <li className="dayOfTheWeek">{fourthDay}</li>
+            <li>Temperature: {Math.round(weatherData.list[3].main.temp)}</li>
+            <li>Weather: {weatherData.list[3].weather[0].description}</li>
             <li>Rainfall</li>
             <Link className="LinkShowMore" to="/ShowThursday">
               Show more
@@ -58,9 +62,9 @@ export default class Main extends React.Component<Props> {
             <span className="material-icons main-icon">chevron_right</span>
           </ul>
           <ul className="weekDayList">
-            <li className="dayOfTheWeek">Friday</li>
-            <li>Temperature</li>
-            <li>Wind speed</li>
+            <li className="dayOfTheWeek">{fifthDay}</li>
+            <li>Temperature: {Math.round(weatherData.list[4].main.temp)}</li>
+            <li>Weather: {weatherData.list[4].weather[0].description}</li>
             <li>Rainfall</li>
             <Link className="LinkShowMore" to="/ShowFriday">
               Show more

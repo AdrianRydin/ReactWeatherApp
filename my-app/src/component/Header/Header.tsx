@@ -6,7 +6,7 @@ export default function Header(){
     return(
         <div className="HeaderContainer">
     <header>
-        <Link className="LinkStart" to="/">Väder App</Link>
+        <Link className="LinkStart" to="/">Weather App</Link>
         <span className="material-icons" id="hamburgerIcon">
         menu
         </span>
