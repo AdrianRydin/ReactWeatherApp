@@ -1,94 +1,95 @@
 .main-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  background-image: url("https://www.howitworksdaily.com/wp-content/uploads/2020/05/sky-4237062_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .weekDayList {
-    list-style: none;
-    padding: 1rem;
-    display: flex;
-    font-weight: bold;
+  list-style: none;
+  padding: 1rem;
+  display: flex;
+  font-weight: bold;
 }
 
 .dayOfTheWeek {
-    padding: 1rem;
-    font-size: 2rem;
+  padding: 1rem;
+  font-size: 2rem;
 }
 
-.weekDayList, li {
-    padding: 1rem 0 1rem 4rem;
+.weekDayList,
+li {
+  padding: 1rem 0 1rem 4rem;
 }
 
 .main-icon {
-    height: 2rem;
-    width: 2rem;
-    padding: 0 0 1.7rem 0;
+  height: 2rem;
+  width: 2rem;
+  padding: 0 0 1.7rem 0;
 }
 
 .hamburger {
-    height: 100%;
-    width: 25%;
-    right: 0;
-    position: absolute;
-    background: #000000;
-    top: 0;
-    /*display: flex;*/
-    justify-content: center;
-    align-items: center;
-    display: none;
+  height: 100%;
+  width: 25%;
+  right: 0;
+  position: absolute;
+  background: #000000;
+  top: 0;
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center;
+  display: none;
 }
 
 .hamburger-content {
-    color: #FFFFFF;
-    list-style: none;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    line-height: 13rem;
-    margin-top: 5rem;
-    font-size: 2rem;
+  color: #ffffff;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  line-height: 13rem;
+  margin-top: 5rem;
+  font-size: 2rem;
 }
 
 .LinkShowMore {
-    color: #000000;
-    padding: 1rem 0 0 2rem;
-    text-decoration: none;
+  color: #000000;
+  padding: 1rem 0 0 2rem;
+  text-decoration: none;
 }
 
 .LinkShowMore:hover {
-    color: #FF0000;
+  color: #ff0000;
 }
 
 .WarningsBox {
-    border: solid #FF0000 2px;
-    margin-bottom: 2rem;
+  border: solid #ff0000 2px;
+  margin-bottom: 2rem;
 }
 
 .WeatherWarning {
-    border-bottom: #FF0000 solid 1px;
-    font-size: 1.5rem;
-    font-weight: bold;
+  border-bottom: #ff0000 solid 1px;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
+@media screen and (max-width: 800px) {
+  .weekDayList {
+    flex-direction: column;
+  }
 
+  main {
+    padding: 0;
+  }
 
-@media screen and (max-width: 800px){
-    .weekDayList {
-        flex-direction: column;
-    }
+  .weekDayList,
+  li {
+    padding: 2rem 0 0 0;
+  }
 
-    main {
-        padding: 0;
-    }
-
-    .weekDayList, li {
-        padding: 2rem 0 0 0;
-    }
-
-    .LinkShowMore {
-        padding: 2rem 0 0 0;
-    }
-
+  .LinkShowMore {
+    padding: 2rem 0 0 0;
+  }
 }
-
