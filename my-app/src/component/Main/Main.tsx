@@ -40,7 +40,7 @@ export default class Main extends React.Component<Props> {
     return (
       <div className="main-container">
         <main>
-          <h2>Stad: {weatherData.city.name}</h2>
+          <h2>City: {weatherData.city.name}</h2>
           <ul className="weekDayList">
             <li className="dayOfTheWeek">{today}</li>
             <li>Weather: {weatherData.list[0].weather[0].main} </li>
