@@ -1,12 +1,13 @@
 import React from "react";
-import { WeatherData } from "../component/Api";
+import { WeatherData } from "../component/Api/Api";
 import "../component/DetailPages";
 
 interface Props {
     weatherData?: WeatherData;
     onNewWeatherData: (weatherData: WeatherData) => void;
   }
-  
+
+//Prints out the detail page
   export default function ShowThursday({weatherData, onNewWeatherData}: Props) {
       if (!weatherData) {
           return <p>Please enter a city!</p>

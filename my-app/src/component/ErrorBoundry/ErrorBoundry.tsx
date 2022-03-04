@@ -8,6 +8,7 @@ interface State {
     hasError: Boolean;
 }
 
+//A ErrorBoundry that gives an error when something isn't working
 export default class Error extends React.Component<Props, State> {
     state: State = {
         hasError: false
@@ -23,6 +24,5 @@ export default class Error extends React.Component<Props, State> {
        }  
        return this.props.children;
     }
-
 }
 

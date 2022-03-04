@@ -1,6 +1,6 @@
 import React from "react";
 import '../pages/pages.css'
-import { WeatherData } from "./Api";
+import { WeatherData } from "./Api/Api";
 
 interface Props {
     weatherData?: WeatherData;
@@ -9,9 +9,11 @@ interface Props {
 
 export default function DetailPages({weatherData, onNewWeatherData}: Props) {
 
+
     if (!weatherData) {
         return <p>Please enter a city!</p>
       }
+
         let sunriseUnix = weatherData.city.sunrise * 1000;
         let date = new Date(sunriseUnix);
         let sunrise = date.toTimeString().substring(0, 5);
@@ -21,5 +23,6 @@ export default function DetailPages({weatherData, onNewWeatherData}: Props) {
         let sunset = date2.toTimeString().substring(0, 5);
     return (
         <div></div>
-    )
+
+)
 }

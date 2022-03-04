@@ -4,6 +4,10 @@
     flex-direction: column;
     margin: auto;
     font-size: 1.5rem;
+
+    background-image: url("https://www.howitworksdaily.com/wp-content/uploads/2020/05/sky-4237062_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .DetailPages {

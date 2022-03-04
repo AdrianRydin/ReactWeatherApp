@@ -1,6 +1,7 @@
 import React, {useState} from "react";
-import SaveCityToLS from "./LS/saveLS";
-import Main from "./Main/Main";
+import SaveCityToLS from "../LS/saveLS";
+import Main from "../Main/Main";
+import Error from "../ErrorBoundry/ErrorBoundry";
 
 export interface WeatherData {
     list: {
@@ -31,8 +32,6 @@ interface Props {
 
 function Api({weatherData, onNewWeatherData}: Props) {
     //Väder API
-
-    const APIKey = "661acb0f32a6cfbc4b06bb0c529a83aa";
 
     const [city, setCity] = useState("");
 
@@ -79,7 +78,8 @@ function Api({weatherData, onNewWeatherData}: Props) {
 
     return (
         <div className="ApiContainer">
-            <p>Welcome to weather app! Write a city to see the weather</p>
+            <p>Welcome to weather app!</p>
+                <p>Write a city to see the weather</p>
             <input
                 type="text"
                 className="input"
@@ -88,13 +88,24 @@ function Api({weatherData, onNewWeatherData}: Props) {
                 value={city}
                 onKeyPress={getWeather}
             />
-
-            <SaveCityToLS/>
+            <Error>
+                <SaveCityToLS/>
+            </Error>
 
             {!weatherData?.list ? (
-                <div></div>
+                <div>
+                    {/*<ul>*/}
+                    {/*    <li>today</li>*/}
+                    {/*    <li>tomorrow</li>*/}
+                    {/*    <li>{thirdDay}</li>*/}
+                    {/*    <li>{fourthDay}</li>*/}
+                    {/*    <li>{fifthDay}</li>*/}
+                    {/*</ul>*/}
+                </div>
             ) : (
-                <Main weatherData={weatherData} onNewWeatherData={onNewWeatherData} />
+                <Error>
+                    <Main weatherData={weatherData} onNewWeatherData={onNewWeatherData}/>
+                </Error>
             )}
 
         </div>
@@ -102,3 +113,4 @@ function Api({weatherData, onNewWeatherData}: Props) {
 }
 
 export default Api;
+

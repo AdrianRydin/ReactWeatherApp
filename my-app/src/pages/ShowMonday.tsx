@@ -1,6 +1,6 @@
 import React from "react";
 import { date } from "yup/lib/locale";
-import { WeatherData } from "../component/Api";
+import { WeatherData } from "../component/Api/Api";
 import "../component/DetailPages";
 
 interface Props {
