@@ -2,7 +2,7 @@ import {useFormik} from "formik";
 import * as Yup from "yup";
 import "./contactForm.css";
 import InputField from "./InputField";
-import {TextField} from "./InputField";
+import TextField from "./TextField";
 
 type PostSchemaType = Record<keyof Form, Yup.AnySchema>;
 
@@ -21,6 +21,7 @@ export interface Props {
     onSubmit: (form: Form) => void;
 }
 
+//Create a form with Formik with an input field and text field that gives error with not enough letters are written
 export default function ContactForm(props: Props) {
     const {errors, touched, handleSubmit, handleChange, handleBlur} =
         useFormik({
@@ -59,7 +60,8 @@ export default function ContactForm(props: Props) {
                     onBlur={handleBlur}
                     error={touched.content && errors.content}
                 />
-                <button type="submit">Submit</button>
+
+                <button className="SubmitBtn" type="submit">Submit</button>
             </form>
 
         </div>

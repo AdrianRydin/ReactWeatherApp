@@ -1,6 +1,7 @@
 import React from "react";
 import '../../pages/pages.css'
 
+//Creates the ul list for all the detail pages
 export default function DetailPages() {
     return (
         <div className="PagesContainer">

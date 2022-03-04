@@ -1,16 +1,20 @@
 import React from "react";
 import "./Main.css";
 import { Link } from "react-router-dom";
-import Api, { WeatherData } from "../Api/Api";
+import { WeatherData } from "../Api/Api";
+import today from "../Api/Api"
+import tomorrow from "../Api/Api"
 import thirdDay from "../Api/Api";
 import fourthDay from "../Api/Api";
 import fifthDay from "../Api/Api";
+
 
 interface Props {
   weatherData?: WeatherData;
   onNewWeatherData: (weatherData: WeatherData) => void;
 }
 
+//Creates the main page with the city name and an ul list with weather information
 export default class Main extends React.Component<Props> {
   render() {
     const {weatherData, onNewWeatherData} = this.props;
