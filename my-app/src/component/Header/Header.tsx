@@ -12,6 +12,7 @@ export default function Header() {
           Weather App
         </Link>
       </header>
+
     </div>
   );
 }
