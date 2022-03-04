@@ -5,13 +5,14 @@ import Main from "./component/Main/Main";
 import Footer from "./component/Footer/Footer";
 import Api, {WeatherData} from "./component/Api/Api";
 import {Routes, Route} from "react-router-dom";
-import ShowMonday from "./pages/ShowMonday";
-import ShowTuesday from "./pages/ShowTuesday";
-import ShowWednesday from "./pages/ShowWednesday";
-import ShowThursday from "./pages/ShowThursday";
-import ShowFriday from "./pages/ShowFriday";
+import ShowToday from "./pages/ShowToday";
+import ShowTomorrow from "./pages/ShowTomorrow";
+import ShowThirdDay from "./pages/ShowThirdDay";
+import ShowFourthDay from "./pages/ShowFourthDay";
+import ShowLastDay from "./pages/ShowLastDay";
 import Error from "./component/ErrorBoundry/ErrorBoundry";
 import ContactForm from "./component/Contact/ContactForm";
+
 
 
 function App() {
@@ -29,11 +30,11 @@ function App() {
                     <Route path="/" element={<Api weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
                     <Route path="/" element={<Main onNewWeatherData={setWeatherData}/>}/>
                     <Route path="/" element={<Header/>}/>
-                    <Route path="/ShowMonday" element={<ShowMonday weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
-                    <Route path="/ShowTuesday" element={<ShowTuesday weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
-                    <Route path="/ShowWednesday" element={<ShowWednesday weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
-                    <Route path="/ShowThursday" element={<ShowThursday weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
-                    <Route path="/ShowFriday" element={<ShowFriday weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
+                    <Route path="/ShowToday" element={<ShowToday weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
+                    <Route path="/ShowTomorrow" element={<ShowTomorrow weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
+                    <Route path="/ShowThirdDay" element={<ShowThirdDay weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
+                    <Route path="/ShowFourthDay" element={<ShowFourthDay weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
+                    <Route path="/ShowLastDay" element={<ShowLastDay weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
                     <Route path="/Contact" element={<ContactForm onSubmit={handleSubmit}/>}
                     />
                 </Routes>

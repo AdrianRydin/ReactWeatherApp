@@ -1,6 +1,8 @@
 import React from "react";
 import { WeatherData } from "../component/Api/Api";
 import DetailPages from "../component/Detailpages/DetailPages";
+import fourthDay from "../component/Main/Main";
+import "pages.css";
 
 interface Props {
     weatherData?: WeatherData;
@@ -8,7 +10,7 @@ interface Props {
   }
 
 //Prints out the detail page
-  export default function ShowWednesday({weatherData, onNewWeatherData}: Props) {
+  export default function ShowFourthDay({weatherData, onNewWeatherData}: Props) {
       if (!weatherData) {
           return <p>Please enter a city!</p>
         }
@@ -21,12 +23,12 @@ interface Props {
         let sunset = date2.toTimeString().substring(0, 5);
       return (
         <div className="PagesContainer">
-            <h2>Wednesday</h2>
+            <h2>{fourthDay}</h2>
             <ul className="DetailPages">
-                <li className="DetailListItem">Temperature: {Math.round(weatherData.list[16].main.temp)} °C</li>
-                <li className="DetailListItem">Feels like: {Math.round(weatherData.list[16].main.feels_like)} °C </li>
-                <li className="DetailListItem">Wind: {weatherData.list[16].wind.speed} m/s</li>
-                <li className="DetailListItem">Humidity: {weatherData.list[16].main.humidity} %</li>
+                <li className="DetailListItem">Temperature: {Math.round(weatherData.list[24].main.temp)} °C</li>
+                <li className="DetailListItem">Feels like: {Math.round(weatherData.list[24].main.feels_like)} °C </li>
+                <li className="DetailListItem">Wind: {weatherData.list[24].wind.speed} m/s</li>
+                <li className="DetailListItem">Humidity: {weatherData.list[24].main.humidity} %</li>
                 <li className="DetailListItem">Sunrise: {sunrise}</li>
                 <li className="DetailListItem">Sunset: {sunset}</li>
             </ul>
