@@ -1,26 +1,25 @@
-import React from 'react';
-
+import React from "react";
 
 export default class TodaysDate extends React.Component {
-    state= {
-        date: ""
-    };
+  state = {
+    date: "",
+  };
 
-    componentDidMount() {
-        this.getDate();
-    }
+  componentDidMount() {
+    this.getDate();
+  }
 
-    getDate = () => {
-        let date = new Date().toDateString();
-        this.setState({date});
-    }
+  getDate = () => {
+    let date = new Date().toDateString();
+    this.setState({ date });
+  };
 
-    render() {
-        const {date} = this.state;
-        return (
-            <div>
-                <p>{date}</p>
-            </div>
-        )
-    }
+  render() {
+    const { date } = this.state;
+    return (
+      <div className="todays-date">
+        <p>{date}</p>
+      </div>
+    );
+  }
 }

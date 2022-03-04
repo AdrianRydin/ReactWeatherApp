@@ -1,10 +1,11 @@
 # ReactWeatherApp
-We have done a weather app with OpenWeatherMap api in React and TypeScript.
-When you write a city name into the first input field you get an API callback with weather information for the next seven days.
-On show more you can get more detailed information about that day. 
 
-In the second input field it's possible to save a city in LS. 
-When you press contact us you get a form that's done with Formik that you can enter your name and some content into. 
+We have done a weather app with OpenWeatherMap api in React and TypeScript.
+When you write a city name into the first input field you get an API callback with weather information for the next five days.
+On show more you can get more detailed information about that day.
+
+In the second input field it's possible to save a city in LS.
+When you press contact us you get a form that's done with Formik that you can enter your name and some content into.
 
 We have also used React-Router to change the URL for the different pages. We have used State in Api, localstorage and TodaysDate.
 
@@ -36,10 +37,5 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-
 [Github repo](https://github.com/AdrianRydin/ReactWeatherApp)
-###Creaters
-##[Edwin Körner](https://github.com/EdwinKorner)
-##[Adrian Rydin](https://github.com/AdrianRydin)
-##[Anna Özmehak](https://github.com/A-Ozmehak)
-
+###Creaters ##[Edwin Körner](https://github.com/EdwinKorner) ##[Adrian Rydin](https://github.com/AdrianRydin) ##[Anna Özmehak](https://github.com/A-Ozmehak)

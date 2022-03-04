@@ -1,24 +1,29 @@
-.material-icons{
-    font-family: 'Material Icons';
-    font-size: 32px;
-    align-self: flex-end;
-    padding: 2rem;
+.material-icons {
+  font-family: "Material Icons";
+  font-size: 32px;
+  align-self: flex-end;
+  padding: 2rem;
 }
 
-header{
-    border-bottom: 2px solid #000000;
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    min-height: 10vh;
-
+header {
+  border-bottom: 2px solid #000000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  min-height: 10vh;
 }
 
 .LinkStart {
-    text-decoration: none;
-    font-size: 3rem;
-    color: #000000;
-    position: absolute;
-    align-self: center;
+  text-decoration: none;
+  font-size: 3rem;
+  color: #000000;
+  position: absolute;
+  align-self: center;
+}
+
+.todays-date {
+  left: 5rem;
+  position: absolute;
+  font-size: larger;
 }
