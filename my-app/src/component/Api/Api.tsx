@@ -5,16 +5,23 @@ import Error from "../ErrorBoundry/ErrorBoundry";
 
 export interface WeatherData {
     list: {
-        wind: number;
+        wind: {
+            speed: number;
+        };
         main: {
             temp: number;
+            feels_like: number;
+            humidity: number;
         };
         weather: {
             description: string;
+            main: string;
         }[];
     }[];
     city: {
         name: string;
+        sunrise: number;
+        sunset: number;
     };
 }
 
@@ -71,7 +78,8 @@ function Api({weatherData, onNewWeatherData}: Props) {
 
     return (
         <div className="ApiContainer">
-            <p>Welcome to weather app!<br/>Write a city to see the weather</p>
+            <p>Welcome to weather app!</p>
+                <p>Write a city to see the weather</p>
             <input
                 type="text"
                 className="input"

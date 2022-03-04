@@ -23,17 +23,19 @@ function App() {
         <div className="App">
             <Header />
 
+
             <Error>
                 <Routes>
-                    <Route path="/" element={<Api weatherData={weatherData} onNewWeatherData={setWeatherData} />}/>
-                    <Route path="/" element={<Main onNewWeatherData={setWeatherData} />}/>
-                    <Route path="/" element={<Header />}/>
-                    <Route path="/ShowMonday" element={<ShowMonday />}/>
-                    <Route path="/ShowTuesday" element={<ShowTuesday />}/>
-                    <Route path="/ShowWednesday" element={<ShowWednesday />}/>
-                    <Route path="/ShowThursday" element={<ShowThursday />}/>
-                    <Route path="/ShowFriday" element={<ShowFriday />}/>
-                    <Route path="/Contact" element={<ContactForm onSubmit={handleSubmit} />} />
+                    <Route path="/" element={<Api weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
+                    <Route path="/" element={<Main onNewWeatherData={setWeatherData}/>}/>
+                    <Route path="/" element={<Header/>}/>
+                    <Route path="/ShowMonday" element={<ShowMonday weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
+                    <Route path="/ShowTuesday" element={<ShowTuesday weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
+                    <Route path="/ShowWednesday" element={<ShowWednesday weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
+                    <Route path="/ShowThursday" element={<ShowThursday weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
+                    <Route path="/ShowFriday" element={<ShowFriday weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
+                    <Route path="/Contact" element={<ContactForm onSubmit={handleSubmit}/>}
+                    />
                 </Routes>
             </Error>
 
