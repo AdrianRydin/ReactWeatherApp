@@ -2,7 +2,7 @@ import React from "react";
 import { WeatherData } from "../component/Api/Api";
 import DetailPages from "../component/Detailpages/DetailPages";
 import fourthDay from "../component/Main/Main";
-import "pages.css";
+import "./pages.css";
 
 interface Props {
     weatherData?: WeatherData;
