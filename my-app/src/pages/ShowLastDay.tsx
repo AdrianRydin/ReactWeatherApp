@@ -23,7 +23,7 @@ interface Props {
       return (
 
         <div className="PagesContainer">
-            <h2>{fifthDay}</h2>
+
             <ul className="DetailPages">
                 <li className="DetailListItem">Temperature: {Math.round(weatherData.list[32].main.temp)} °C</li>
                 <li className="DetailListItem">Feels like: {Math.round(weatherData.list[32].main.feels_like)} °C </li>

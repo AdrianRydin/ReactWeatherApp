@@ -24,7 +24,7 @@ interface Props {
         let sunset = date2.toTimeString().substring(0, 5);
       return (
         <div className="PagesContainer">
-            <h2>{thirdDay}</h2>
+
             <ul className="DetailPages">
                 <li className="DetailListItem">Temperature: {Math.round(weatherData.list[16].main.temp)} °C</li>
                 <li className="DetailListItem">Feels like: {Math.round(weatherData.list[16].main.feels_like)} °C </li>
