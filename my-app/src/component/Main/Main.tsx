@@ -1,10 +1,10 @@
 import React from "react";
 import "./Main.css";
 import { Link } from "react-router-dom";
-import Api, { WeatherData } from "../Api";
-import thirdDay from "../Api";
-import fourthDay from "../Api";
-import fifthDay from "../Api";
+import Api, { WeatherData } from "../Api/Api";
+import thirdDay from "../Api/Api";
+import fourthDay from "../Api/Api";
+import fifthDay from "../Api/Api";
 
 interface Props {
   weatherData?: WeatherData;

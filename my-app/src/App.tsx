@@ -3,8 +3,8 @@ import "./App.css";
 import Header from "./component/Header/Header";
 import Main from "./component/Main/Main";
 import Footer from "./component/Footer/Footer";
-import Api, {WeatherData} from "./component/Api";
-import State from "./component/Api";
+import Api, {WeatherData} from "./component/Api/Api";
+import State from "./component/Api/Api";
 import {Routes, Route} from "react-router-dom";
 import ShowMonday from "./pages/ShowMonday";
 import ShowTuesday from "./pages/ShowTuesday";
@@ -22,25 +22,24 @@ function App() {
 
     return (
         <div className="App">
-            <Header/>
-
+            <Header />
 
             <Error>
                 <Routes>
-                    <Route path="/" element={<Api weatherData={weatherData} onNewWeatherData={setWeatherData}/>}/>
-                    <Route path="/" element={<Main onNewWeatherData={setWeatherData}/>}/>
-                    <Route path="/" element={<Header/>}/>
-                    <Route path="/ShowMonday" element={<ShowMonday/>}/>
-                    <Route path="/ShowTuesday" element={<ShowTuesday/>}/>
-                    <Route path="/ShowWednesday" element={<ShowWednesday/>}/>
-                    <Route path="/ShowThursday" element={<ShowThursday/>}/>
-                    <Route path="/ShowFriday" element={<ShowFriday/>}/>
-                    <Route path="/Contact" element={<ContactForm onSubmit={handleSubmit}/>}
+                    <Route path="/" element={<Api weatherData={weatherData} onNewWeatherData={setWeatherData} />}/>
+                    <Route path="/" element={<Main onNewWeatherData={setWeatherData} />}/>
+                    <Route path="/" element={<Header />}/>
+                    <Route path="/ShowMonday" element={<ShowMonday />}/>
+                    <Route path="/ShowTuesday" element={<ShowTuesday />}/>
+                    <Route path="/ShowWednesday" element={<ShowWednesday />}/>
+                    <Route path="/ShowThursday" element={<ShowThursday />}/>
+                    <Route path="/ShowFriday" element={<ShowFriday />}/>
+                    <Route path="/Contact" element={<ContactForm onSubmit={handleSubmit} />}
                     />
                 </Routes>
             </Error>
 
-            <Footer/>
+            <Footer />
         </div>
     );
 }
