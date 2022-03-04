@@ -8,11 +8,9 @@
 header{
     border-bottom: 2px solid #000000;
     display:flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
     position: relative;
     min-height: 10vh;
-
 }
 
 .LinkStart {
