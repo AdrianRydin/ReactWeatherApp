@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    background-image: url("https://www.howitworksdaily.com/wp-content/uploads/2020/05/sky-4237062_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .contactForm {
@@ -36,5 +39,5 @@ color: #FF0000;
 }
 
 .SubmitBtn {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
