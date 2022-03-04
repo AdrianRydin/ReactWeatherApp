@@ -1,5 +1,5 @@
 import React from "react";
-import DetailPages from "../component/DetailPages";
+import DetailPages from "../component/Detailpages/DetailPages";
 
 export default function ShowFriday() {
     return (
