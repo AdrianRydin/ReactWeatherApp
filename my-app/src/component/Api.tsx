@@ -1,9 +1,6 @@
 import React, {useState} from "react";
-import SaveCityToLS from "./saveLS";
-import Error from "./ErrorBoundry/ErrorBoundry";
+import SaveCityToLS from "./LS/saveLS";
 import Main from "./Main/Main";
-import cityName from "./Main/Main";
-import setCityName from "./Main/Main";
 
 export interface WeatherData {
     list: {

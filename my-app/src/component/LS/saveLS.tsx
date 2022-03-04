@@ -1,5 +1,6 @@
 import React from "react";
-import {LSState} from "../hooks/localstorage";
+import {LSState} from "../../hooks/localstorage";
+import './saveLS.css'
 
 export default function SaveCityToLS() {
     let [cityName, setCityName] = LSState("", "city")
@@ -10,13 +11,11 @@ export default function SaveCityToLS() {
                 <input
                     type="text"
                     value={cityName}
+                    className="saveCityInputField"
                     onChange={(e) => setCityName(e.target.value)}
-
                 />
-                <input type="submit" value="Save"/>
+                <input type="submit" value="Save a city"/>
             </form>
-
-            {/*<button value={cityName} onChange={(e) => (e.target.value)}>Save city</button>*/}
         </div>
     )
 }
