@@ -8,13 +8,17 @@ When you press contact us you get a form that's done with Formik that you can en
 
 We have also used React-Router to change the URL for the different pages. We have used State in Api, localstorage and TodaysDate.
 
-To get the project running you need to go into my-app directory with 'cd my-app' and then run 'npm i'.
-
 ##Required
-[Git](https://git-scm.com/)
-[Node.js](https://nodejs.org/) (with npm)
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/) (with npm)
 
-# Getting Started with Create React App
+##Run project 
+* `cd my-app` Get into project directory
+* `npm i` Install 
+* `npm start` Run app 
+
+
+# We're been using Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -39,7 +43,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 [Github repo](https://github.com/AdrianRydin/ReactWeatherApp)
 ###Creaters
-##[Edwin Körner](https://github.com/EdwinKorner)
-##[Adrian Rydin](https://github.com/AdrianRydin)
-##[Anna Özmehak](https://github.com/A-Ozmehak)
+* [Edwin Körner](https://github.com/EdwinKorner)
+* [Adrian Rydin](https://github.com/AdrianRydin)
+* [Anna Özmehak](https://github.com/A-Ozmehak)
 
