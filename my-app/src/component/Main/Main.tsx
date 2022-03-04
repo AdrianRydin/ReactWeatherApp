@@ -25,9 +25,9 @@ export default class Main extends React.Component<Props> {
               <h2>Stad: {weatherData.city.name}</h2>
               <ul className="weekDayList">
                 <li className="dayOfTheWeek">Today</li>
-                <li>Temperature {Math.round(weatherData.list[0].main.temp)}</li>
-                <li>Weather: {weatherData.list[0].weather[0].description} </li>
-                <li>Rainfall</li>
+                <li>Weather: {weatherData.list[0].weather[0].main} </li>
+                <li>Temperature: {Math.round(weatherData.list[0].main.temp)} °C</li>
+                <li>Feels like: {Math.round(weatherData.list[0].main.feels_like)} °C</li>
                 <Link className="LinkShowMore" to="/ShowMonday">
                   Show more
                 </Link>
@@ -35,9 +35,9 @@ export default class Main extends React.Component<Props> {
               </ul>
               <ul className="weekDayList">
                 <li className="dayOfTheWeek">Tomorrow</li>
-                <li>Temperature: {Math.round(weatherData.list[1].main.temp)}</li>
-                <li>Weather: {weatherData.list[1].weather[0].description}</li>
-                <li>Rainfall</li>
+                <li>Weather: {weatherData.list[8].weather[0].main}</li>
+                <li>Temperature: {Math.round(weatherData.list[8].main.temp)} °C</li>
+                <li>Feels like: {Math.round(weatherData.list[8].main.feels_like)} °C</li>
                 <Link className="LinkShowMore" to="/ShowTuesday">
                   Show more
                 </Link>
@@ -45,9 +45,9 @@ export default class Main extends React.Component<Props> {
               </ul>
               <ul className="weekDayList">
                 <li className="dayOfTheWeek">{thirdDay}</li>
-                <li>Temperature: {Math.round(weatherData.list[2].main.temp)}</li>
-                <li>Weather: {weatherData.list[2].weather[0].description}</li>
-                <li>Rainfall</li>
+                <li>Weather: {weatherData.list[16].weather[0].main}</li>
+                <li>Temperature: {Math.round(weatherData.list[16].main.temp)} °C</li>
+                <li>Feels like: {Math.round(weatherData.list[16].main.feels_like)} °C</li>
                 <Link className="LinkShowMore" to="/ShowWednesday">
                   Show more
                 </Link>
@@ -55,9 +55,9 @@ export default class Main extends React.Component<Props> {
               </ul>
               <ul className="weekDayList">
                 <li className="dayOfTheWeek">{fourthDay}</li>
-                <li>Temperature: {Math.round(weatherData.list[3].main.temp)}</li>
-                <li>Weather: {weatherData.list[3].weather[0].description}</li>
-                <li>Rainfall</li>
+                <li>Weather: {weatherData.list[24].weather[0].main}</li>
+                <li>Temperature: {Math.round(weatherData.list[24].main.temp)} °C</li>
+                <li>Feels like: {Math.round(weatherData.list[24].main.feels_like)} °C</li>
                 <Link className="LinkShowMore" to="/ShowThursday">
                   Show more
                 </Link>
@@ -65,9 +65,9 @@ export default class Main extends React.Component<Props> {
               </ul>
               <ul className="weekDayList">
                 <li className="dayOfTheWeek">{fifthDay}</li>
-                <li>Temperature: {Math.round(weatherData.list[4].main.temp)}</li>
-                <li>Weather: {weatherData.list[4].weather[0].description}</li>
-                <li>Rainfall</li>
+                <li>Weather: {weatherData.list[32].weather[0].main}</li>
+                <li>Temperature: {Math.round(weatherData.list[32].main.temp)} °C</li>
+                <li>Feels like: {Math.round(weatherData.list[32].main.feels_like)} °C</li>
                 <Link className="LinkShowMore" to="/ShowFriday">
                   Show more
                 </Link>

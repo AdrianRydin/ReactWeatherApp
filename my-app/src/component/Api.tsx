@@ -4,16 +4,23 @@ import Main from "./Main/Main";
 
 export interface WeatherData {
     list: {
-        wind: number;
+        wind: {
+            speed: number;
+        };
         main: {
             temp: number;
+            feels_like: number;
+            humidity: number;
         };
         weather: {
             description: string;
+            main: string;
         }[];
     }[];
     city: {
         name: string;
+        sunrise: number;
+        sunset: number;
     };
 }
 
