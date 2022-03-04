@@ -34,7 +34,9 @@ export default function ContactForm(props: Props) {
 
     return (
         <div className="contactContainer">
+
             <form onSubmit={handleSubmit} className="contactForm">
+                <h3>Enter a name and tell us why you want to get in contact with us.</h3>
                 <InputField
                     label="name"
                     placeholder="Name..."
