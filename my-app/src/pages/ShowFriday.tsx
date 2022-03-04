@@ -1,6 +1,6 @@
 import React from "react";
 import { WeatherData } from "../component/Api/Api";
-import "../component/DetailPages";
+import DetailPages from "../component/Detailpages/DetailPages";
 
 
 interface Props {
@@ -20,6 +20,7 @@ interface Props {
         let date2 = new Date(sunsetUnix);
         let sunset = date2.toTimeString().substring(0, 5);
       return (
+
         <div className="PagesContainer">
             <h2>Friday</h2>
             <ul className="DetailPages">

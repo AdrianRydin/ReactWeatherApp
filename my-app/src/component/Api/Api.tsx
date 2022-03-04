@@ -56,26 +56,6 @@ function Api({weatherData, onNewWeatherData}: Props) {
         }
     };
 
-    let date = new Date();
-
-    let first = date.getDate() - date.getDay() + 4;
-    let second = first + 1;
-    let third = first + 2;
-    let fourth = first + 3;
-    let fifth = first + 4;
-    let sixth = first + 5;
-    let last = first + 6;
-
-    let today = new Date(date.setDate(first)).toDateString().substring(0, 3);
-    let tomorrow = new Date(date.setDate(second)).toDateString().substring(0, 3);
-    let thirdDay = new Date(date.setDate(third)).toDateString().substring(0, 3);
-    let fourthDay = new Date(date.setDate(fourth)).toDateString().substring(0, 3);
-    let fifthDay = new Date(date.setDate(fifth)).toDateString().substring(0, 3);
-    let sixthDay = new Date(date.setDate(sixth)).toDateString().substring(0, 3);
-    let lastday = new Date(date.setDate(last)).toDateString().substring(0, 3);
-
-    let day = date.getDay();
-
     return (
         <div className="ApiContainer">
             <p>Welcome to weather app!</p>
@@ -94,13 +74,7 @@ function Api({weatherData, onNewWeatherData}: Props) {
 
             {!weatherData?.list ? (
                 <div>
-                    {/*<ul>*/}
-                    {/*    <li>today</li>*/}
-                    {/*    <li>tomorrow</li>*/}
-                    {/*    <li>{thirdDay}</li>*/}
-                    {/*    <li>{fourthDay}</li>*/}
-                    {/*    <li>{fifthDay}</li>*/}
-                    {/*</ul>*/}
+
                 </div>
             ) : (
                 <Error>

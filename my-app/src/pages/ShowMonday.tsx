@@ -1,7 +1,7 @@
 import React from "react";
 import { date } from "yup/lib/locale";
 import { WeatherData } from "../component/Api/Api";
-import "../component/DetailPages";
+import DetailPages from "../component/Detailpages/DetailPages";
 
 interface Props {
     weatherData?: WeatherData;
@@ -9,6 +9,7 @@ interface Props {
   }
   
   export default function ShowMonday({weatherData, onNewWeatherData}: Props) {
+
       if (!weatherData) {
           return <p>Please enter a city!</p>
         }

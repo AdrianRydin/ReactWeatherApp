@@ -1,6 +1,6 @@
 import React from "react";
 import { WeatherData } from "../component/Api/Api";
-import "../component/DetailPages";
+import DetailPages from "../component/Detailpages/DetailPages";
 
 interface Props {
     weatherData?: WeatherData;
