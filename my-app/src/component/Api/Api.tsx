@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SaveCityToLS from "../LS/saveLS";
 import Main from "../Main/Main";
-import Error from "../ErrorBoundry/ErrorBoundry";
+import ErrorBoundary from "../ErrorBoundry/ErrorBoundry";
 
 export interface WeatherData {
   list: {
@@ -68,16 +68,16 @@ function Api({ weatherData, onNewWeatherData }: Props) {
         value={city}
         onKeyPress={getWeather}
       />
-      <Error>
+      <ErrorBoundary>
         <SaveCityToLS />
-      </Error>
+      </ErrorBoundary>
 
       {!weatherData?.list ? (
         <div></div>
       ) : (
-        <Error>
+        <ErrorBoundary>
           <Main weatherData={weatherData} onNewWeatherData={onNewWeatherData} />
-        </Error>
+        </ErrorBoundary>
       )}
     </div>
   );

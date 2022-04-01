@@ -9,12 +9,12 @@ interface State {
 }
 
 //A ErrorBoundry that gives an error when something isn't working
-export default class Error extends React.Component<Props, State> {
+export default class ErrorBoundary extends React.Component<Props, State> {
     state: State = {
         hasError: false
     }
 
-    static getDerivedStateFromError(_:Error): State {
+    static getDerivedStateFromError(_:ErrorBoundary): State {
         return { hasError: true };
     }
 

@@ -10,7 +10,7 @@ import ShowTomorrow from "./pages/ShowTomorrow";
 import ShowThirdDay from "./pages/ShowThirdDay";
 import ShowFourthDay from "./pages/ShowFourthDay";
 import ShowLastDay from "./pages/ShowLastDay";
-import Error from "./component/ErrorBoundry/ErrorBoundry";
+import ErrorBoundary from "./component/ErrorBoundry/ErrorBoundry";
 import ContactForm from "./component/Contact/ContactForm";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <Header />
 
-      <Error>
+      <ErrorBoundary>
         <Routes>
           <Route
             path="/"
@@ -87,7 +87,7 @@ function App() {
             element={<ContactForm onSubmit={handleSubmit} />}
           />
         </Routes>
-      </Error>
+      </ErrorBoundary>
 
       <Footer />
     </div>
