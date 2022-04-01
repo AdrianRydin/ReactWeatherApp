@@ -13,10 +13,10 @@ We have also used React-Router to change the URL for the different pages. We hav
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with npm)
 
-##Run project 
+##Run project
 * `cd my-app` Get into project directory
-* `npm i` Install 
-* `npm start` Run app 
+* `npm i` Install
+* `npm start` Run app
 
 
 # We're been using Create React App
@@ -47,5 +47,3 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 * [Edwin Körner](https://github.com/EdwinKorner)
 * [Adrian Rydin](https://github.com/AdrianRydin)
 * [Anna Özmehak](https://github.com/A-Ozmehak)
-
-
